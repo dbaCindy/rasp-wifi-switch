@@ -9,7 +9,7 @@ iface wlan0 inet static
         broadcast 10.10.1.255
         netmask   255.255.255.0
 
-auto wlan1
+
 allow-hotplug wlan1
 iface wlan1 inet dhcp
    wpa-ssid "demo-ap"
