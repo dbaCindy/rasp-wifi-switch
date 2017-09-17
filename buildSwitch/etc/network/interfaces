@@ -19,3 +19,6 @@ allow-hotplug wlan2
 iface wlan2 inet dhcp
    wpa-ssid "{Home SSID}"
    wpa-psk  "{Home Password}"
+
+up iptables-restore < /etc/iptables.ipv4.nat
+

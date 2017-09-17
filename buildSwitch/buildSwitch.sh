@@ -13,7 +13,6 @@ cp ./etc/hostapd/hostapd.conf /etc/hostapd/hostapd.conf
 cp ./etc/default/hostapd      /etc/default/hostapd
 cp ./etc/dnsmasq.conf         /etc/dnsmasq.conf
 cp ./etc/sysctl.conf           /etc/sysctl.conf
-cp ./etc/rc.local             /etc/rc.local
 
 sysctl -w net.ipv4.ip_forward=1
 iptables -t nat -A POSTROUTING -o wlan2 -j MASQUERADE  
