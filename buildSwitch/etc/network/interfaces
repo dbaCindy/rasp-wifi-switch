@@ -14,3 +14,8 @@ allow-hotplug wlan1
 iface wlan1 inet dhcp
    wpa-ssid "demo-ap"
    wpa-psk  "raspberry"
+
+allow-hotplug wlan2
+iface wlan1 inet dhcp
+   wpa-ssid "{Home SSID}"
+   wpa-psk  "{Home Password}"
