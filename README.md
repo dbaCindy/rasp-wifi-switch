@@ -33,7 +33,7 @@ sudo apt-get -y dist-upgrade
 ##### Install all the required software:
 
 ~~~
-sudo apt-get install dnsmasq hostapd
+sudo apt-get -y install dnsmasq hostapd
 ~~~
 
 ##### Stop Services
@@ -43,7 +43,7 @@ sudo systemctl stop dnsmasq
 sudo systemctl stop hostapd
 ~~~
 
-Edit /etc/network/interface
+Edit /etc/network/interfaces
 
 ~~~
 auto lo
@@ -62,6 +62,12 @@ allow-hotplug wlan1
 iface wlan1 inet dhcp
    wpa-ssid "demo-ap"
    wpa-psk  "raspberry"
+   
+auto wlan2
+allow-hotplug wlan2
+iface wlan2 inet dhcp
+   wpa-ssid "GOOD LIFE"
+   wpa-psk  "8134403392"
 ~~~
 
 Edit /etc/dhcpcd.conf
